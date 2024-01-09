@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pick Your Lunch</title>
+    <script type="text/javascript" src="users.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+	
+
+
+<div class="options-container" id="optionsSet1">
+    <h2>Main Courses</h2>
+    <label>
+        <input type="radio" name="optionSet1" value="Chicken">
+        <img src="data/chicken.jpg" alt="Option 1">
+    </label>
+    <label>
+        <input type="radio" name="optionSet1" value="Tacos">
+        <img src="data/taco.jpg" alt="Option 2">
+    </label>
+</div>
+
+<div class="options-container" id="optionsSet2" style="display: none;">
+    <h2>Sides</h2>
+    <label>
+        <input type="radio" name="optionSet2" value="Fries">
+        <img src="data/fries.jpg" alt="Option 3">
+    </label>
+    <label>
+        <input type="radio" name="optionSet2" value="Tater Tots">
+        <img src="data/tatertots.jpg" alt="Option 4">
+    </label>
+</div>
+
+<div id="selectedOptionContainer" class="selected-options-container"></div>
+
+<button id="submitButton" type="button" style=" margin-right: 10px; display: none">Submit</button>
+
+</body>
+</html>
+

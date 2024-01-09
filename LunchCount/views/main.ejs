@@ -1,0 +1,32 @@
+<!-- main.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pick Your Lunch</title>
+    <script src="main.js"></script>
+    
+</head>
+<body style="background-image: url('data/back.svg'); background-size: cover;">
+
+   
+    <!-- Loop through each option set received from the server -->
+    <% for (let i = 0; i < optionSets[0].length; i++) { %>
+        <div class="options-container" id="optionsSet<%= i + 1 %>">
+            <h2><%= optionSets[0][i] %></h2>
+            
+            <!-- Loop through each option in the current option set -->
+            <% for (let j = 0; j < optionSets[3][i]; j++) { %>
+                <label>
+                    <input type="radio" name="optionSet<%= i + 1 %>" value="<%= optionSets[1][i * (i + 1) + j] %>">
+                    <img src="<%= optionSets[2][i * (i + 1) + j] %>" alt="Option <%= j + 1 %>">
+                </label>
+            <% } %>
+        </div>
+    <% } %>
+    <div id="selectedOptionContainer" class="selected-options-container" style="font-size: 50px;"></div>
+    <button id="submitButton" type="button" style="margin-right: 10px; display: none">Submit</button>
+</body>
+</html>
